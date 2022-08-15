@@ -9,11 +9,11 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
-function BotCard({ bot, onDraftBot, onDeleteBot }) {
- const {id, name, health, damage, armor } = bot
-    function handleDraftBotClick(){
-        onDraftBot(bot)
-    }
+function BotCard({ bot, onDeleteBot, handleBotClick  }) {
+ const {id, name, health, damage, armor, drafted } = bot
+    // function handleDraftBotClick(){
+    //     onDraftBot(bot) 
+    // }onDraftBot, onClick={(e) => handleDraftBotClick(e.target.value)}
   
     function handleDeleteBotClick(){
         fetch(`http://localhost:3001/bots/${id}`, {
@@ -22,13 +22,20 @@ function BotCard({ bot, onDraftBot, onDeleteBot }) {
         onDeleteBot(id);
     }
 
+    function handleDraftBotClick(){
+      if(!drafted) {
+        handleBotClick(bot);
+      } else {
+        alert("Already Drafted")
+      }
+    }
+
   return (
     <div className="ui column">
       <div
         className="ui card"
-        key={bot.id}
-        onClick={(e) => handleDraftBotClick(e.target.value)}
       >
+        <button onClick={handleDraftBotClick}>draft bot</button>
         <div className="image">
           <img alt="oh no!" src={bot.avatar_url} />
         </div>
