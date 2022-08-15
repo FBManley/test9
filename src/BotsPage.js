@@ -24,7 +24,7 @@ function BotsPage() {
         .then((resp) => resp.json())
         .then((bots) => {
           const updatedBots = bots.map((bot) => {
-            return {...bot, drafted: false};
+            return {...bot, drafted: false}; //add key value pair to updatedBots
           });
           setCollection(updatedBots)
         })
