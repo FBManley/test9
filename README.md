@@ -1,4 +1,12 @@
 //review state, function updated state triggering re-renders
+react reacts to change in state. When state changes, react re-renders. 
+"request-response flow":
+what the component returns renders once using the initial value, then useEffect runs fetch (fetch is asynchronous, allows us to send an async get request to an API, and when its finished it will come back and turn it into consumable json and set that data into state. The second it gets to state, react re-ren
+ternary
+const handleChange = () => {
+  let woundedBot = (checkthis) ? doThisIfTrue : doThisIfFalse
+}
+useEffect can be used to make something I want to happen whenever this other thing changes, pass through [state] to change state to cause an "effect". A way to control when thing fires. 
 
 ##
 npm install

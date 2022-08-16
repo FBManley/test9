@@ -4,13 +4,7 @@ import BotCollection from "./BotCollection";
 
 function BotsPage() {
   const [collection, setCollection] = useState([]);
-  // const [army, setArmy] = useState([])
-  
-    // useEffect(() => {
-    //   fetch('http://localhost:3001/bots')
-    //   .then(resp => resp.json())
-    //   .then(collection => setCollection(collection))
-    // }, [])
+ 
 
     useEffect(() => {
       fetch("http://localhost:3001/bots"
@@ -28,24 +22,20 @@ function BotsPage() {
           });
           setCollection(updatedBots)
         })
-    }, [])
+    }, []) //only run on initial mount, runs only after every single render. A way to define a function that runs only when we want. 
 
-
-    // function handleDraftBot(bot){
-    //     setArmy([...army, bot])
-    // } onDraftBot={handleDraftBot}
 
     function handleBotClick(draftedBot) {
       const updatedBot = collection.map((toBeDrafted) => {
         if(toBeDrafted.id === draftedBot.id) return {...toBeDrafted, drafted: true};
         console.log("I was drafted")
         return toBeDrafted
-          console.log("BotsPage",toBeDrafted)
+        
       })
       setCollection(updatedBot)
     } 
     const alreadyDrafted = collection.filter((bot) => bot.drafted);
-    console.log(alreadyDrafted)
+    
 
     function handleDeleteBot(id) {
      const updatedArmyArray= collection.filter((bot) => bot.id !== id);

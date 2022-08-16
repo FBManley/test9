@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 const botTypeClasses = {
   Assault: "icon military",
@@ -11,10 +11,11 @@ const botTypeClasses = {
 
 function BotCard({ bot, onDeleteBot, handleBotClick  }) {
  const {id, name, health, damage, armor, drafted } = bot
-    // function handleDraftBotClick(){
-    //     onDraftBot(bot) 
-    // }onDraftBot, onClick={(e) => handleDraftBotClick(e.target.value)}
-  
+ const [active, setActive] = useState("I'm Ready!");
+
+    const handleWoundedBot = () => {
+       active === "Not Ready" ? setActive("Ready") : setActive("Not Ready")
+      }
     function handleDeleteBotClick(){
         fetch(`http://localhost:3001/bots/${id}`, {
             method: "DELETE",
@@ -35,7 +36,7 @@ function BotCard({ bot, onDeleteBot, handleBotClick  }) {
       <div
         className="ui card"
       >
-        <button onClick={handleDraftBotClick}>draft bot</button>
+        <button onClick={handleDraftBotClick}>Draft Bot</button>
         <div className="image">
           <img alt="oh no!" src={bot.avatar_url} />
         </div>
@@ -66,13 +67,12 @@ function BotCard({ bot, onDeleteBot, handleBotClick  }) {
             <div className="ui center aligned segment basic">
               <button
                 className="ui mini red button"
-                onClick={(e) =>
-                 
-                    handleDeleteBotClick(e.target.value)
+                onClick={(e) =>handleDeleteBotClick(e.target.value)
                 }
               >
                 x
               </button>
+              <button onClick={handleWoundedBot}>Status:{active}</button>
             </div>
           </span>
         </div>
