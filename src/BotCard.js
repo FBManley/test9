@@ -30,6 +30,9 @@ function BotCard({ bot, onDeleteBot, handleBotClick  }) {
         alert("Already Drafted")
       }
     }
+    // function handleSendBackToCollection(){
+    // <button onClick={handleSendBackToCollection}>Reject Bot</button>
+    // }
 
   return (
     <div className="ui column">
@@ -37,6 +40,7 @@ function BotCard({ bot, onDeleteBot, handleBotClick  }) {
         className="ui card"
       >
         <button onClick={handleDraftBotClick}>Draft Bot</button>
+        
         <div className="image">
           <img alt="oh no!" src={bot.avatar_url} />
         </div>

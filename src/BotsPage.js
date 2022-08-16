@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from "react";
 import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
+import NewBotForm from "./NewBotForm";
 
 function BotsPage() {
   const [collection, setCollection] = useState([]);
- 
+  // const [category, setCategory] = useState("All")
 
     useEffect(() => {
       fetch("http://localhost:3001/bots"
@@ -34,6 +35,7 @@ function BotsPage() {
       })
       setCollection(updatedBot)
     } 
+
     const alreadyDrafted = collection.filter((bot) => bot.drafted);
     
 
@@ -41,9 +43,20 @@ function BotsPage() {
      const updatedArmyArray= collection.filter((bot) => bot.id !== id);
         setCollection(updatedArmyArray);
     }
-  
+
+    function handleAddBot(newBot){
+      setCollection([...collection, newBot])
+    }
+    // function handleCategoryChange(){
+    //   setCollection(collection === )
+    // }
+    // const botsToDisplay = collection.filter((bot) => {
+    //   if(selectedCategory === "All") return true;
+    //   return bot.category ===selectedCategory
+    // })
   return (
     <div>
+      <NewBotForm onAddBot={handleAddBot}/>
       <YourBotArmy 
       setCollection={setCollection}
       collection={collection} 
@@ -51,7 +64,11 @@ function BotsPage() {
       handleBotClick={handleBotClick}  
       alreadyDrafted={alreadyDrafted}
       /> 
-      <BotCollection collection={collection}  handleBotClick={handleBotClick}/> 
+      <BotCollection 
+      // category={selectedCategory} 
+      // onCategoryChange={handleCategoryChange} 
+      collection={collection}  
+      handleBotClick={handleBotClick}/> 
     </div>
   )
 }

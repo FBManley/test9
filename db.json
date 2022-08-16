@@ -1,18 +1,6 @@
 {
   "bots": [
     {
-      "id": 116,
-      "name": "o-44",
-      "health": 51,
-      "damage": 90,
-      "armor": 36,
-      "bot_class": "Assault",
-      "catchphrase": "10001111010110110100111010011000011001100",
-      "avatar_url": "https://robohash.org/temporibusexercitationemprovident.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:11.119Z",
-      "updated_at": "2018-10-02T19:55:11.119Z"
-    },
-    {
       "id": 117,
       "name": "VL-37",
       "health": 74,
@@ -1019,6 +1007,106 @@
       "avatar_url": "https://robohash.org/teneturquaereiciendis.png?size=300x300&set=set1",
       "created_at": "2018-10-02T19:55:12.537Z",
       "updated_at": "2018-10-02T19:55:12.537Z"
+    },
+    {
+      "name": "Megatron",
+      "health": "999999",
+      "damage": "999999",
+      "armor": "999999",
+      "botclass": "Autobot",
+      "catchphrase": "Its bottin' time",
+      "id": 201
+    },
+    {
+      "name": "MEGATWAT",
+      "health": "1",
+      "damage": "0",
+      "armor": "-1",
+      "botclass": "RUMBA",
+      "catchphrase": "MEEP MORP",
+      "id": 202
+    },
+    {
+      "name": "MEGATWAT",
+      "health": "1",
+      "damage": "0",
+      "armor": "-1",
+      "botclass": "RUMBA",
+      "catchphrase": "MEEP MORP",
+      "id": 203
+    },
+    {
+      "name": "w",
+      "health": "1",
+      "damage": "1",
+      "armor": "1",
+      "botclass": "c",
+      "catchphrase": "flop",
+      "id": 204
+    },
+    {
+      "name": "Baby",
+      "health": "1",
+      "damage": "-9",
+      "armor": "0",
+      "botclass": "infant",
+      "catchphrase": "gaga",
+      "id": 205
+    },
+    {
+      "name": "",
+      "health": "1",
+      "damage": "-9",
+      "armor": "0",
+      "botclass": "infant",
+      "catchphrase": "gaga",
+      "id": 206
+    },
+    {
+      "name": "blop",
+      "health": "23",
+      "damage": "90",
+      "armor": "899",
+      "botclass": "mop",
+      "catchphrase": "slosh",
+      "id": 207
+    },
+    {
+      "name": "test",
+      "health": "12",
+      "damage": "2",
+      "armor": "1",
+      "botclass": "as",
+      "catchphrase": "bo",
+      "id": 208
+    },
+    {
+      "name": "qw",
+      "health": "",
+      "damage": "",
+      "armor": "",
+      "botclass": "",
+      "catchphrase": "",
+      "id": 209
+    },
+    {
+      "name": "Ted",
+      "health": "7",
+      "damage": "8",
+      "armor": "9",
+      "botclass": "1",
+      "catchphrase": "78900",
+      "id": 210
+    },
+    {
+      "name": "test",
+      "health": "2",
+      "damage": "1",
+      "armor": "1",
+      "botclass": "stock",
+      "catchphrase": "stocktest",
+      "avatar_url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/31112add-759a-4d7c-9989-679cc3bdd91d/deo7nwh-a47a7ee7-044d-4bac-87d6-48320a29fb45.png/v1/fit/w_300,h_698,strp/battle_bot_by_cs234477fromscratch_deo7nwh-300w.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Njk4IiwicGF0aCI6IlwvZlwvMzExMTJhZGQtNzU5YS00ZDdjLTk5ODktNjc5Y2MzYmRkOTFkXC9kZW83bndoLWE0N2E3ZWU3LTA0NGQtNGJhYy04N2Q2LTQ4MzIwYTI5ZmI0NS5wbmciLCJ3aWR0aCI6Ijw9NzA5In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.iZWyE3MGwBDWK-mJp8G8p0MBWzmL5YYT73MrqU-5BLA",
+      "id": 211
     }
   ]
 }
